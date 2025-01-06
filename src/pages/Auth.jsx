@@ -8,6 +8,7 @@ const Auth = () => {
   const { isLogin, redirect, loadin } = useAuth();
   const [isLoginView, setIsLoginView] = useState(true);
   const navigate = useNavigate();
+
   const handleToggle = (type) => {
     setIsLoginView(type === "login");
   };
@@ -42,7 +43,7 @@ const Auth = () => {
                     <ul className="floating-menu-user">
                       <li>
                         <a
-                          className={!isLogin ? "active" : ""}
+                          className={!isLoginView ? "active" : ""}
                           onClick={() => handleToggle("register")}
                         >
                           New User
@@ -50,7 +51,7 @@ const Auth = () => {
                       </li>
                       <li>
                         <a
-                          className={isLogin ? "active" : ""}
+                          className={isLoginView ? "active" : ""}
                           onClick={() => handleToggle("login")}
                         >
                           Existing User
@@ -60,7 +61,7 @@ const Auth = () => {
                   </div>
                   <div className="row">
                     <div className="col-12 inner-form-content">
-                      {isLogin ? <Login /> : <Register />}
+                      {isLoginView ? <Login /> : <Register />}
                       <div className="or-text"> OR </div>
                       <div className="socialbtns">
                         <ul>
