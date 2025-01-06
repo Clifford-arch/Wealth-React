@@ -84,13 +84,12 @@ const Auth = () => {
                       {isLoginView ? (
                         <>
                           <div className="sign-up-text">
-                            {" "}
                             By signing up, you have read and agreed to Mojo
-                            Wealth{" "}
+                            Wealth
                           </div>
                           <div className="privacy-text">
-                            <a className="privacy-text-color">Privacy Policy</a>{" "}
-                            and{" "}
+                            <a className="privacy-text-color">Privacy Policy</a>
+                            and
                             <a className="privacy-text-color">Disclaimers </a>
                           </div>
                         </>
